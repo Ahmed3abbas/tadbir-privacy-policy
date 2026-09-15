@@ -29,7 +29,7 @@
 <body>
 
   <h1>TADBIR – Privacy Policy</h1>
-  <p class="subtitle">SJMMJ &nbsp;•&nbsp; Last updated: June 2026</p>
+  <p class="subtitle">SJMMJ &nbsp;•&nbsp; Last updated: July 2026</p>
 
   <p>
     TADBIR is a community management application developed for SJMMJ. This Privacy Policy
@@ -38,65 +38,89 @@
 
   <h2>1. Information We Collect</h2>
   <ul>
-    <li>Full name, phone number, and city provided during registration</li>
-    <li>Gender and kabila (community group) information</li>
+    <li>Full name, phone number, city, and date of birth provided during registration</li>
+    <li>Gender, blood group, profession, and kabila (community group) information</li>
     <li>Device token for push notifications (via Firebase Cloud Messaging)</li>
-    <li>App usage data stored in Firebase Firestore</li>
+    <li>Device identifier used to manage login sessions across devices</li>
+    <li>App usage data stored in Firebase Firestore (events, requests, notices, notes)</li>
+    <li>Attendance records for kabila meetings marked by your agewan</li>
+    <li>Book issue and return history from the community library</li>
+    <li>Kabila and city transfer request history</li>
   </ul>
 
   <h2>2. How We Use Your Information</h2>
   <ul>
     <li>To provide access to community notices, events, and announcements</li>
-    <li>To send relevant push notifications based on your city and role</li>
-    <li>To manage event participation requests and library book issues</li>
-    <li>To display your profile within the app</li>
+    <li>To send relevant push notifications based on your city, kabila, and role</li>
+    <li>To manage event participation requests (majlish / jamanvar)</li>
+    <li>To track kabila meeting attendance and generate attendance summaries</li>
+    <li>To manage library book requests, issues, and returns</li>
+    <li>To process kabila and city transfer requests submitted by your agewan</li>
+    <li>To display your profile and community information within the app</li>
+    <li>To verify your identity via OTP during registration and new device login</li>
+    <li>To manage your login session and enforce 90-day session expiry for security</li>
   </ul>
 
   <h2>3. Data Storage</h2>
   <p>
-    All data is securely stored using Google Firebase (Firestore and Firebase Cloud Messaging).
-    Firebase complies with GDPR and other international data protection standards.
-    We do not store data on any third-party servers outside of Firebase.
+    All data is securely stored using Google Firebase (Firestore, Firebase Authentication,
+    and Firebase Cloud Messaging). Firebase complies with GDPR and other international
+    data protection standards. We do not store data on any third-party servers outside of Firebase,
+    except for push notification delivery which uses Firebase Cloud Messaging infrastructure.
   </p>
 
   <h2>4. Data Sharing</h2>
   <p>
     We do not sell, trade, or share your personal information with any third parties.
-    Your data is only accessible to authorized administrators of SJMMJ.
+    Your data is only accessible to authorized administrators and agewans of SJMMJ
+    within the scope of their community role.
   </p>
 
   <h2>5. Push Notifications</h2>
   <p>
     TADBIR uses Firebase Cloud Messaging (FCM) to send push notifications about
-    community events, notices, and updates. You can disable notifications at any
-    time through your device settings.
+    community events, notices, assignments, attendance sessions, book approvals, and updates.
+    Notifications are targeted by city, kabila, gender, or individual user as appropriate.
+    You can disable notifications at any time through your device settings.
   </p>
 
-  <h2>6. Data Retention</h2>
+  <h2>6. Session Management</h2>
   <p>
-    Your data is retained as long as your account is active. You may request
-    deletion of your account and associated data by contacting us.
+    TADBIR uses a secure session system to manage your login. A unique session token is
+    stored on your device using encrypted storage. Sessions expire after 90 days of inactivity,
+    after which you will be required to log in again. Logging in on a new device requires
+    OTP verification for security.
   </p>
 
-  <h2>7. Children's Privacy</h2>
+  <h2>7. Data Retention</h2>
+  <p>
+    Your data is retained as long as your account is active. Past events, expired notices,
+    and old notifications are periodically purged by administrators to keep the app clean.
+    You may request deletion of your account and associated data by contacting us.
+  </p>
+
+  <h2>8. Children's Privacy</h2>
   <p>
     TADBIR is intended for use by community members aged 13 and above.
     We do not knowingly collect data from children under 13.
   </p>
 
-  <h2>8. Security</h2>
+  <h2>9. Security</h2>
   <p>
-    We implement industry-standard security measures including Firebase security rules
-    and encrypted data transmission to protect your personal information.
+    We implement industry-standard security measures including Firebase security rules,
+    server-side role verification via Cloud Functions, encrypted session tokens,
+    and OTP-based device verification to protect your personal information.
+    Sensitive operations such as account creation, password changes, and banning
+    are handled exclusively through Cloud Functions and are never accessible directly from the client.
   </p>
 
-  <h2>9. Changes to This Policy</h2>
+  <h2>10. Changes to This Policy</h2>
   <p>
     We may update this Privacy Policy from time to time. Any changes will be
     reflected on this page with an updated date.
   </p>
 
-  <h2>10. Contact Us</h2>
+  <h2>11. Contact Us</h2>
   <p>
     If you have any questions about this Privacy Policy, please contact us at:<br />
     <a href="mailto:info@hikmahvision.com">info@hikmahvision.com</a>
